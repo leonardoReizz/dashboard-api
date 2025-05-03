@@ -11,15 +11,15 @@ export class UserRepository {
     return prisma.user.findUnique({ where: { email } });
   }
 
-  async findById(id: string): Promise<User | null> {
+  async findById(id: number): Promise<User | null> {
     return prisma.user.findUnique({ where: { id } });
   }
 
-  async update(id: string, data: User): Promise<User> {
+  async update(id: number, data: User): Promise<User> {
     return prisma.user.update({ where: { id }, data });
   }
 
-  async delete(id: string): Promise<void> {
+  async delete(id: number): Promise<void> {
     await prisma.user.delete({ where: { id } });
   }
 }
