@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.registerController = void 0;
+const register_controller_1 = require("./register.controller");
+const register_use_case_1 = require("./register.use-case");
+const user_repository_1 = require("../../../user/repositories/user.repository");
+const userRepository = new user_repository_1.UserRepository();
+const registerUseCase = new register_use_case_1.RegisterUseCase(userRepository);
+const registerController = new register_controller_1.RegisterController(registerUseCase);
+exports.registerController = registerController;
