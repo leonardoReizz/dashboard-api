@@ -19,7 +19,7 @@ model User {
 
 model PCUsage {
   id          Int      @id @default(autoincrement())
-  coresUage   Float
+  coresUsage  Float
   totalCores  Float
   memoryUsage Float
   totalMemory Float
