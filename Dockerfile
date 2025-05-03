@@ -26,4 +26,4 @@ RUN yarn build
 
 EXPOSE ${PORT}
 
-CMD ["yarn start"]
+CMD ["yarn", "start"]
